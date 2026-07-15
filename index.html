@@ -48,7 +48,7 @@
 <div id="wrap">
   <div id="sidebar">
     <div id="head">
-      <h1>🏔️ High Sierra Thru-Hike</h1>
+      <h1>High Sierra Thru-Hike</h1>
       <p>July 15 – August 14 · ~380 mi · SF → Whitney → JMT → N. Yosemite → SF</p>
       <div id="stats">
         <div><b>31</b>days</div>
@@ -78,7 +78,7 @@ const STOPS = [
  [4,"Jul 19",36.4522,-118.1697,"Cottonwood Lakes TH — drop Abby","road","4.5","Drop Abby off, then continue over Cottonwood Pass."],
  [4,"Jul 19",36.4636,-118.2461,"Chicken Spring Lake","camp","4.5","Over Cottonwood Pass to the lake."],
  [5,"Jul 20",36.5650,-118.3200,"Crabtree Meadow → Guitar Lake","camp","17–19","Camp between Upper Crabtree Meadow and Guitar Lake."],
- [6,"Jul 21",36.5785,-118.2920,"⛰️ Mt. Whitney summit","summit","","Up at 6am, summit by 10am to beat thunderstorms. 14,505 ft!"],
+ [6,"Jul 21",36.5785,-118.2920,"Mt. Whitney summit","summit","","Up at 6am, summit by 10am to beat thunderstorms. 14,505 ft!"],
  [6,"Jul 21",36.6000,-118.3550,"Sandy Meadow","camp","17–19","Hike back down, camp at Sandy Meadow."],
  [7,"Jul 22",36.6820,-118.3720,"Base of Forester Pass","camp","~13","Climb over, camp at the lake below Forester Pass (13,153 ft)."],
  [8,"Jul 23",36.7728,-118.3410,"Onion Valley Trailhead","special","15.5","Over Kearsarge Pass to the trailhead; camp near it."],
@@ -103,7 +103,7 @@ const STOPS = [
  [27,"Aug 11",38.0500,-119.5500,"Rancheria Creek, Kerrick Canyon","camp","~14.5",""],
  [28,"Aug 12",38.1000,-119.6000,"Falls Creek / Grace Meadow","camp","~15","Past Tilden Lake."],
  [29,"Aug 13",38.2000,-119.6200,"Kennedy Canyon","camp","~12",""],
- [30,"Aug 14",38.3216,-119.7444,"Kennedy Meadows North (finish)","special","13.5","Hitchhike to Sonora, then transit back to San Francisco. 🎉"],
+ [30,"Aug 14",38.3216,-119.7444,"Kennedy Meadows North (finish)","special","13.5","Hitchhike to Sonora, then transit back to San Francisco."],
 ];
 
 const map = L.map('map',{zoomControl:true}).setView([37.2,-118.7],7);
@@ -127,7 +127,7 @@ STOPS.forEach((s,i)=>{
          `<div class="numlbl" style="line-height:${size-4}px">${day}</div></div>`});
   const m = L.marker([lat,lon],{icon}).addTo(map);
   m.bindPopup(`<b>Day ${day} · ${date}</b><br><b style="color:#fff">${title}</b>`+
-    (miles?`<br>📏 ${miles} mi`:``)+(note?`<br>${note}`:``));
+    (miles?`<br>${miles} mi`:``)+(note?`<br>${note}`:``));
   markers.push(m);
 });
 
