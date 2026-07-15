@@ -52,7 +52,6 @@
       <p>July 15 – August 14 · ~380 mi · SF → Whitney → JMT → N. Yosemite → SF</p>
       <div id="stats">
         <div><b>31</b>days</div>
-        <div><b>2</b>resupplies</div>
         <div><b>~80,000'</b>elevation gain</div>
       </div>
     </div>
@@ -69,13 +68,13 @@
 <script>
 // [day, date, lat, lon, title, type, miles, note]
 const STOPS = [
- [0,"Jul 15",37.7749,-122.4194,"Leave San Francisco","road","","Pick up Abby, then drive to Cottonwood Lakes TH."],
+ [0,"Jul 15",37.7749,-122.4194,"Leave San Francisco","road","","Pick up A., then drive to Cottonwood Lakes TH."],
  [0,"Jul 15",36.4522,-118.1697,"Cottonwood Lakes Trailhead","road","","Car camp overnight at the trailhead."],
- [1,"Jul 16",36.0447,-118.1265,"Kennedy Meadows South (start)","special","","Taxi from Cottonwood Lakes TH (Chuck Tello, 805-657-0021). Begin hiking north."],
+ [1,"Jul 16",36.0447,-118.1265,"Kennedy Meadows South (start)","special","","Taxi from Cottonwood Lakes TH (C.T.). Begin hiking north."],
  [1,"Jul 16",36.1500,-118.2050,"South Fork Kern River / Beck Meadows","camp","11–14","First camp: Beck Meadows or South Fork of the Kern River."],
  [2,"Jul 17",36.2700,-118.2050,"Gomez Meadow","camp","13–16",""],
  [3,"Jul 18",36.4000,-118.1720,"Diaz Creek","camp","~12",""],
- [4,"Jul 19",36.4522,-118.1697,"Cottonwood Lakes TH — drop Abby","road","4.5","Drop Abby off, then continue over Cottonwood Pass."],
+ [4,"Jul 19",36.4560,-118.1660,"Cottonwood Lakes TH — drop A.","road","4.5","Drop A. off, then continue over Cottonwood Pass."],
  [4,"Jul 19",36.4636,-118.2461,"Chicken Spring Lake","camp","4.5","Over Cottonwood Pass to the lake."],
  [5,"Jul 20",36.5650,-118.3200,"Crabtree Meadow → Guitar Lake","camp","17–19","Camp between Upper Crabtree Meadow and Guitar Lake."],
  [6,"Jul 21",36.5785,-118.2920,"Mt. Whitney summit","summit","","Up at 6am, summit by 10am to beat thunderstorms. 14,505 ft!"],
@@ -89,9 +88,9 @@ const STOPS = [
  [13,"Jul 28",37.1740,-118.6800,"Evolution Lake / Darwin Meadow","camp","17–19","Evolution Valley."],
  [14,"Jul 29",37.2380,-118.8790,"Muir Trail Ranch","special","~15","Second resupply at MTR."],
  [15,"Jul 30",37.3770,-118.9850,"Lake Thomas Edison","camp","~19",""],
- [16,"Jul 31",37.4700,-118.9400,"Lake Virginia","camp","~13","Meet up with Jackson."],
+ [16,"Jul 31",37.4700,-118.9400,"Lake Virginia","camp","~13","Meet up with J."],
  [17,"Aug 1",37.5500,-119.0300,"Iva Bell Hot Springs","camp","~10","Soak, then a few more miles before camp."],
- [18,"Aug 2",37.6136,-119.0736,"Reds Meadow Resort","special","~12","Shuttle to Mammoth; meet Roshan & Tomas. Mammoth Mountain Inn (10400 Minaret Rd). Resupply groceries."],
+ [18,"Aug 2",37.6136,-119.0736,"Reds Meadow Resort","special","~12","Shuttle to Mammoth; meet R. & T. Mammoth Mountain Inn (10400 Minaret Rd). Resupply groceries."],
  [19,"Aug 3",37.6250,-119.0850,"Reds Meadow Campground / Devils Postpile","special","","Visit Devil's Postpile."],
  [20,"Aug 4",37.6800,-119.1600,"Shadow Lake","camp","~10",""],
  [21,"Aug 5",37.7700,-119.1700,"Rush Creek","camp","~10",""],
@@ -111,7 +110,7 @@ const topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{
   maxZoom:17, attribution:'© OpenTopoMap, © OpenStreetMap contributors'});
 const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
   maxZoom:19, attribution:'© OpenStreetMap contributors'});
-topo.addTo(map);
+osm.addTo(map);
 L.control.layers({"Topographic":topo,"Street":osm}).addTo(map);
 
 const colors={camp:'#4caf78',special:'#e6a23c',summit:'#e05d5d',road:'#8a94a6'};
